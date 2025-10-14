@@ -10,13 +10,13 @@ const menuLinks = [
 const socialLinks = [
     { 
         name: "Facebook", 
-        href: "https://www.facebook.com/share/1HasH35A91/?mibextid=wwXIfr", 
+        href: "https://web.facebook.com/profile.php?id=61578635675285", 
         icon: "fab fa-facebook-f",
         target: "_blank"
     },
     { 
         name: "Instagram", 
-        href: "https://www.instagram.com/wildcars.chile?igsh=MWFvcnl5aTZvZ2o5bw==", 
+        href: "https://www.instagram.com/wildcars.cl/", 
         icon: "fab fa-instagram",
         target: "_blank"
     }
@@ -70,9 +70,9 @@ const contactInfo = [
       <!-- Primera Columna: Logo y Redes Sociales -->
       <div class="space-y-6">
         <!-- Logo -->
-        <div class="flex items-center space-x-2">
-          <img class="h-8 w-auto" src="/logowildars-movil.webp" alt="auto loa - automotora">
-          <span class="ml-2 text-xl font-bold text-white">Auto Loa</span>
+        <div class="flex items-center space-x-4">
+          <img class="h-24 w-auto" src="/logo.webp" alt="Wildcars - Automotora">
+          <span class="text-1xl font-bold text-white">Wildcars</span>
         </div>
 
         <!-- Redes Sociales -->
@@ -114,17 +114,7 @@ const contactInfo = [
               </div>
               <div>
                 <p class="text-sm font-medium text-gray-300">{contact.type}</p>
-                {Array.isArray(contact.values) ? (
-                  <ul class="space-y-1">
-                    {contact.values.map((item) => (
-                      <li>
-                        <a href={item.link} class="text-gray-400 hover:text-white transition-colors duration-200 underline decoration-dotted hover:decoration-solid">
-                          {item.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                ) : contact.link ? (
+                {contact.link ? (
                   <a 
                     href={contact.link}
                     target={contact.isExternal ? "_blank" : undefined}
